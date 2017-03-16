@@ -55,11 +55,12 @@ def findPrice(req, data):
     
     if currency == "bitcoin":
         res=data[0]
-    
+        return res
     if currency == "ethereum":
         res=data[1]
+        return res
     
-    return res
+    
 
 
 def makeWebhookResult(data):
