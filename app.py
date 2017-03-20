@@ -61,27 +61,27 @@ def makeWebhookResult(data, req):
         data1=data[0]
         name=data1.get('name')
         price=data1.get('price_usd')
-    if currency == "Ethereum"
+    if currency == "Ethereum":
         data1=data[1]
         name=data1.get('name')
         price=data1.get('price_usd')
-    if currency == "Dash"
+    if currency == "Dash":
         data1=data[2]
         name=data1.get('name')
         price=data1.get('price_usd')
-    if currency == "Monero"
+    if currency == "Monero":
         data1=data[3]
         name=data1.get('name')
         price=data1.get('price_usd')
-    if currency == "Litecoin"
+    if currency == "Litecoin":
         data1=data[5]
         name=data1.get('name')
         price=data1.get('price_usd')
-    if currency == "Ripple"
+    if currency == "Ripple":
         data1=data[4]
         name=data1.get('name')
         price=data1.get('price_usd')
-    if currency == "Zcash"
+    if currency == "Zcash":
         data1=data[11]
         name=data1.get('name')
         price=data1.get('price_usd')
