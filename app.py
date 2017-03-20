@@ -54,7 +54,8 @@ def findPrice(req, data):
     currency = parameters.get("currency")
     
    # if currency == "bitcoin":
-        res=data[0]
+        array=data[0]
+        res=array[0]
         return res
    # if currency == "ethereum":
    #     res=data[1]
