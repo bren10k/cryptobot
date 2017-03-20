@@ -42,32 +42,25 @@ def processRequest(req):
     resultall = urllib.request.urlopen(baseurl).read()
     
     data = json.loads(resultall)
-    result = findPrice(req, data)
     
-    res = makeWebhookResult(result)
+    
+    res = makeWebhookResult(data, req)
     return res
 
 
-def findPrice(req, data):
+    
+
+
+def makeWebhookResult(data, req):
+    
     result = req.get("result")
     parameters = result.get("parameters")
     currency = parameters.get("currency")
     
-   # if currency == "bitcoin":
-        array=data[0]
-        res=array[0]
-        return res
-   # if currency == "ethereum":
-   #     res=data[1]
-   #     return res
-    
-    
-
-
-def makeWebhookResult(data):
-    
-    name=data.get('name')
-    price=data.get('price_usd')
+    if currency == "Bitcoin":
+        data1=data[0]
+        name=data1.get('name')
+        price=data1.get('price_usd')
 
    # astronomy=weather.get('astronomy')
 
