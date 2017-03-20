@@ -42,11 +42,11 @@ def processRequest(req):
     
     
     baseurl = "https://api.coinmarketcap.com/v1/ticker/"
- 
+    surl = baseurl + currency
     
     
     
-    resultall = urllib.request.urlopen(baseurl + currency).read()
+    resultall = urllib.request.urlopen(surl).read()
     
     data = json.loads(resultall)
     
@@ -59,9 +59,9 @@ def processRequest(req):
 def makeWebhookResult(data):
     
 
-        data1=data[0]
-        name=data1.get('name')
-        price=data1.get('price_usd')   
+    data1=data[0]
+    name=data.get('name')
+    price=data.get('price_usd')   
 
    # astronomy=weather.get('astronomy')
 
