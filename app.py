@@ -34,58 +34,34 @@ def webhook():
 
 
 def processRequest(req):
-    baseurl = "https://api.coinmarketcap.com/v1/ticker/"
- 
-    
-    
-    
-    resultall = urllib.request.urlopen(baseurl).read()
-    
-    data = json.loads(resultall)
-    
-    
-    res = makeWebhookResult(data, req)
-    return res
-
-
-    
-
-
-def makeWebhookResult(data, req):
     
     result = req.get("result")
     parameters = result.get("parameters")
     currency = parameters.get("currency")
     
-    if currency == "Bitcoin":
+    
+    
+    baseurl = "https://api.coinmarketcap.com/v1/ticker/"
+ 
+    
+    
+    
+    resultall = urllib.request.urlopen(baseurl + currency).read()
+    
+    data = json.loads(resultall)
+    
+    
+    res = makeWebhookResult(data)
+    return res
+
+
+
+def makeWebhookResult(data):
+    
+
         data1=data[0]
         name=data1.get('name')
-        price=data1.get('price_usd')
-    if currency == "Ethereum":
-        data1=data[1]
-        name=data1.get('name')
-        price=data1.get('price_usd')
-    if currency == "Dash":
-        data1=data[2]
-        name=data1.get('name')
-        price=data1.get('price_usd')
-    if currency == "Monero":
-        data1=data[3]
-        name=data1.get('name')
-        price=data1.get('price_usd')
-    if currency == "Litecoin":
-        data1=data[5]
-        name=data1.get('name')
-        price=data1.get('price_usd')
-    if currency == "Ripple":
-        data1=data[4]
-        name=data1.get('name')
-        price=data1.get('price_usd')
-    if currency == "Zcash":
-        data1=data[11]
-        name=data1.get('name')
-        price=data1.get('price_usd')
-        
+        price=data1.get('price_usd')   
 
    # astronomy=weather.get('astronomy')
 
