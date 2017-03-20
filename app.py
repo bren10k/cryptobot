@@ -60,8 +60,8 @@ def makeWebhookResult(data):
     
 
     data1=data[0]
-    name=data.get('name')
-    price=data.get('price_usd')   
+    name=data1.get('name')
+    price=data1.get('price_usd')   
 
    # astronomy=weather.get('astronomy')
 
