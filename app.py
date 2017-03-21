@@ -72,7 +72,7 @@ def makeWebhookResult(data):
 
    #  print(json.dumps(item, indent=4))
 
-    speech = "Currently "+ name +" is at " +price + " Dollars"
+    speech = "Currently "+ name +" is at " +price + " US Dollars"
 
     
    
