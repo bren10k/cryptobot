@@ -6,7 +6,7 @@ standard_library.install_aliases()
 import urllib.request, urllib.parse, urllib.error
 import json
 import os
-#test
+
 
 from flask import Flask
 from flask import request
@@ -35,7 +35,7 @@ def webhook():
 
 def processRequest(req):
     
-    result = req.get("result")
+    result = req.get("queryResult")
     parameters = result.get("parameters")
     currency = parameters.get("currency")
     
