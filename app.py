@@ -82,7 +82,13 @@ def makeWebhookResult(data):
 
     return {
         "fullfillmentText": speech,
-   
+        "fulfillmentMessages": [
+               {
+                 "text": [
+                   speech
+                  ],
+               }
+                  ],
         "payload": {
             "google": {
                 "expect_user_response": "false",
