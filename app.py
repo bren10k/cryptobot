@@ -120,7 +120,7 @@ def makeWebhookResult(data):
   },
   "outputContexts": [
     {
-      "name": "projects/${PROJECT_ID}/agent/sessions/${SESSION_ID}/contexts/context name",
+     
       "lifespanCount": 5,
       "parameters": {
         "param": "param value"
