@@ -81,7 +81,7 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
-  "fulfillmentText": "displayed&spoken response",
+  "fulfillmentText": speech,
   "fulfillmentMessages": [
     {
       "text": [
@@ -92,7 +92,7 @@ def makeWebhookResult(data):
   "source": "example.com",
   "payload": {
     "google": {
-      "expectUserResponse": true,
+      "expectUserResponse": false,
       "richResponse": {
         "items": [
           {
@@ -112,7 +112,7 @@ def makeWebhookResult(data):
   },
   "outputContexts": [
     {
-      "name": "projects/${PROJECT_ID}/agent/sessions/${SESSION_ID}/contexts/context name",
+      
       "lifespanCount": 5,
       "parameters": {
         "param": "param value"
