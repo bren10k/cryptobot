@@ -81,7 +81,7 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
-        "fullfillmentText": speech,
+        "fulfillmentText": speech,
         "fulfillmentMessages": [
                {
                  "text": [
