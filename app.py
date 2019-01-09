@@ -81,53 +81,21 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
-  "fulfillmentText": speech,
-  "fulfillmentMessages": [
-    {
-      "text": [
-        "text response"
-      ],
-    }
-  ],
-  "source": "example.com",
-  "payload": {
-    "google": {
-      "expectUserResponse": false,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "this is a simple response"
+        "fulfillmentText": speech,
+        "fulfillmentMessages": [
+               {
+                 "text": [
+                   speech
+                  ],
+               }
+                  ],
+        "payload": {
+            "google": {
+                "expect_user_response": "false",
+                 }
             }
-          }
-        ]
-      }
-    },
-    "facebook": {
-      "text": "Hello, Facebook!"
-    },
-    "slack": {
-      "text": "This is a text response for Slack."
-    }
-  },
-  "outputContexts": [
-    {
-      
-      "lifespanCount": 5,
-      "parameters": {
-        "param": "param value"
-      }
-    }
-  ],
-  "followupEventInput": {
-    "name": "event name",
-    "languageCode": "en-US",
-    "parameters": {
-      "param": "param value"
-    }
-  }
-}
 
+          }
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
