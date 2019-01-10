@@ -85,9 +85,7 @@ def makeWebhookResult(data):
         "fulfillmentText": speech,
         "fulfillmentMessages": [
                {
-                 "text": [
-                   speech
-                  ],
+                 "text": [speech],
                }
                   ],
         "payload": {
@@ -98,6 +96,7 @@ def makeWebhookResult(data):
                 
              
                  }
+            }
             "outputContexts": [
                 {
                     "name": "projects/testsatoshi-64f93/agent/sessions/" + sessionId + "/contexts/" + contextName,
@@ -107,7 +106,7 @@ def makeWebhookResult(data):
                     }
                 }
                ]
-            }   
+               
 
           }
         
