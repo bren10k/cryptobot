@@ -102,9 +102,12 @@ def makeWebhookResult(data):
                 {
                     "name": "projects/testsatoshi-64f93/agent/sessions/" + sessionId + "/contexts/" + contextName,
                     "lifespanCount": 5,
-                     
+                    "parameters": {
+                        "param": "param value",
+                    }
                 }
-            }
+               ]
+            }   
 
           }
         
