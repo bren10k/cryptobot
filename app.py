@@ -79,13 +79,13 @@ def makeWebhookResult(data):
 
     print("Response:")
     print(speech)
-
+    
     return {
-  "fulfillmentText": speech,
-  "fulfillmentMessages": [
-    {
-      "card": {
-        "title": "card title",
+         "fulfillmentText": speech,
+         "fulfillmentMessages": [
+             {
+         "card": {
+            "title": "card title",
         "subtitle": "card text",
         "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
         "buttons": [
@@ -93,24 +93,24 @@ def makeWebhookResult(data):
             "text": "button text",
             "postback": "https://assistant.google.com/"
           }
-        ]
-      }
-    }
-  ],
-  "source": "example.com",
-  "payload": {
-    "google": {
-      "expectUserResponse": false,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "this is a simple response"
-            }
-          }
-        ]
-      }
-    },
+                     ]
+                 }
+                }
+              ],
+              "source": "example.com",
+             "payload": {
+              "google": {
+                "expectUserResponse": false,
+               "richResponse": {
+                  "items": [
+                   {
+                        "simpleResponse": {
+                          "textToSpeech": "this is a simple response"
+                        }
+                     }
+                  ]
+                }
+               },
     "facebook": {
       "text": "Hello, Facebook!"
     },
