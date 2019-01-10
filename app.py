@@ -90,20 +90,16 @@ def makeWebhookResult(data):
                   ],
         "payload": {
             "google": {
-                "expect_user_response": "false",
-                
-                
-                
-             
+                "expect_user_response": false,
                  }
             }
-            "outputContexts": [
+        "outputContexts": [
                 {
-                    "name": session,
+                    "name": session + "/contexts/context name",
                     "lifespanCount": 5,
                     "parameters": {
                         "param": "param value",
-                    }
+                        }
                 }
                ]
                
