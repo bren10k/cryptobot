@@ -73,6 +73,8 @@ def makeWebhookResult(data):
    #  print(json.dumps(item, indent=4))
 
     speech = "Currently "+ name +" is at " +price + " US Dollars"
+    
+    req = request.get_json(silent=True, force=True)
 
     
     sessionId = req.get("sessionId")
