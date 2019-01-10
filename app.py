@@ -118,21 +118,8 @@ def makeWebhookResult(data):
       "text": "This is a text response for Slack."
     }
   },
-  "outputContexts": [
-    {
-     
-      "lifespanCount": 5,
-      "parameters": {
-        "param": "param value"
-      }
-    }
-  ],
-  "followupEventInput": {
-    "name": "event name",
-    "languageCode": "en-US",
-    "parameters": {
-      "param": "param value"
-    }
+  
+  
   }
 }
 
