@@ -76,10 +76,8 @@ def makeWebhookResult(data):
     
     req = request.get_json(silent=True, force=True)
 
+    session = req.get("session")
     
-    sessionId = req.get("sessionId")
-    contexts = req.get("contexts")
-    contextName = contexts.get("name")
     print("Response:")
     print(speech)
     
@@ -101,7 +99,7 @@ def makeWebhookResult(data):
             }
             "outputContexts": [
                 {
-                    "name": "projects/testsatoshi-64f93/agent/sessions/" + sessionId + "/contexts/" + contextName,
+                    "name": session,
                     "lifespanCount": 5,
                     "parameters": {
                         "param": "param value",
