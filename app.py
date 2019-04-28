@@ -85,9 +85,12 @@ def makeWebhookResult(data):
         "fulfillmentText": speech,
         "fulfillmentMessages": [
                {
-                 "text": [speech],
+                 "text": [
+                     speech
+                 ],
                }
-                  ],
+        ],
+        "source": "coinmarketcap.com",
         "payload": {
             "google": {
                 "expect_user_response": false,
