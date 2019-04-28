@@ -96,15 +96,15 @@ def makeWebhookResult(data):
                 "expect_user_response": false,
                  }
             }
-        "outputContexts": [
-                {
-                    "name": session + "/contexts/context name",
-                    "lifespanCount": 5,
-                    "parameters": {
-                        "param": "param value",
-                        }
-                }
-        ],
+   #     "outputContexts": [
+   #             {
+  #                  "name": session + "/contexts/context name",
+  #                  "lifespanCount": 5,
+  #                  "parameters": {
+    #                    "param": "param value",
+   #                     }
+   #             }
+   #     ],
                
 
           }
