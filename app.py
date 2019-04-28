@@ -96,24 +96,31 @@ def makeWebhookResult(data):
                 "expect_user_response": false,
                  }
             }
-   #     "outputContexts": [
-   #             {
-  #                  "name": session + "/contexts/context name",
-  #                  "lifespanCount": 5,
-  #                  "parameters": {
-    #                    "param": "param value",
-   #                     }
-   #             }
-   #     ],
+        "outputContexts": [
+                {
+                    "name": session + "/contexts/context name",
+                    "lifespanCount": 5,
+                    "parameters": {
+                        "param": name,
+                       }
+                }
+        ],
+              "followupEventInput": {
+              "name": "event name",
+              "languageCode": "en-US",
+              "parameters": {
+                     "param": name
+              }
+  }
                
 
           }
         
     
 
-#The if __name__ == '__main__':
- #   port = int(os.getenv('PORT', 5000))
-#
- #   print("Starting app on port %d" % port)
-#
- #   app.run(debug=False, port=port, host='0.0.0.0')
+The if __name__ == '__main__':
+    port = int(os.getenv('PORT', 5000))
+
+    print("Starting app on port %d" % port)
+
+    app.run(debug=False, port=port, host='0.0.0.0')
