@@ -104,7 +104,7 @@ def makeWebhookResult(data):
                         "param": "param value",
                         }
                 }
-               ]
+        ],
                
 
           }
