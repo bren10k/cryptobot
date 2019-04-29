@@ -97,15 +97,15 @@ def makeWebhookResult(data):
                  }
             },
         
-        "outputContexts": [
-    {
-      "name": session + "/contexts/context name",
-      "lifespanCount": 5,
-      "parameters": {
-        "param": name
-      }
-    }
-  ],
+#        "outputContexts": [
+#    {
+#      "name": session + "/contexts/context name",
+#      "lifespanCount": 5,
+#      "parameters": {
+#        "param": name
+#      }
+#    }
+#  ],
         
   #      "outputContexts": [
    #             {
@@ -116,13 +116,13 @@ def makeWebhookResult(data):
         #               }
          #       }
     #    ],
-              "followupEventInput": {
-              "name": "event name",
-              "languageCode": "en-US",
-              "parameters": {
-                     "param": name
-              }
-  }
+    #          "followupEventInput": {
+  #            "name": "event name",
+   #           "languageCode": "en-US",
+    #          "parameters": {
+    #                 "param": name
+    #          }
+ # }
                
 
           }
