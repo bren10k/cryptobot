@@ -82,7 +82,26 @@ def makeWebhookResult(data):
     print(speech)
     
     return {
-        "fulfillmentText": speech,
+        
+        {
+  "payload": {
+    "google": {
+      "expectUserResponse": true,
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": "this is a simple response"
+            }
+          }
+        ]
+      }
+    }
+  }
+}        
+        
+        
+  #      "fulfillmentText": speech,
   #      "fulfillmentMessages": [
    #            {
    #             "text": [
@@ -90,12 +109,12 @@ def makeWebhookResult(data):
     #             ],
     #           }
     #    ],
-        "source": "coinmarketcap.com",
-        "payload": {
-            "google": {
-                "expect_user_response": false,
-                 }
-            },
+   #     "source": "coinmarketcap.com",
+   #     "payload": {
+  #          "google": {
+   #             "expect_user_response": false,
+   #              }
+  #          },
         
 #        "outputContexts": [
 #    {
