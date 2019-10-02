@@ -81,27 +81,11 @@ def makeWebhookResult(data):
     print("Response:")
     print(speech)
     
-    return #{
+    return {
         
-        {
-  "payload": {
-    "google": {
-      "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "this is a simple response"
-            }
-          }
-        ]
-      }
-    }
-  }
-}        
+  
         
-        
-  #      "fulfillmentText": speech,
+        "fulfillmentText": speech
   #      "fulfillmentMessages": [
    #            {
    #             "text": [
