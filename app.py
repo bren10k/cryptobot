@@ -81,7 +81,7 @@ def makeWebhookResult(data):
     print("Response:")
     print(speech)
     
-    return {
+    return #{
         
         {
   "payload": {
@@ -144,7 +144,7 @@ def makeWebhookResult(data):
  # }
                
 
-          }
+ #         }
         
     
 if __name__ == '__main__':
