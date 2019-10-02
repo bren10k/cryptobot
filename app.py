@@ -62,7 +62,7 @@ def makeWebhookResult(data):
     data1=data[0]
     name=data1.get('name')
     price=data1.get('price_usd')   
-
+    roundPrice= price[:7]
    # astronomy=weather.get('astronomy')
 
     
@@ -72,7 +72,7 @@ def makeWebhookResult(data):
 
    #  print(json.dumps(item, indent=4))
 
-    speech = "Currently "+ name +" is at " +price + " US Dollars"
+    speech = "Currently "+ name +" is at " +roundPrice + " US Dollars"
     
     req = request.get_json(silent=True, force=True)
 
